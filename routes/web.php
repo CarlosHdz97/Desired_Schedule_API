@@ -22,3 +22,11 @@ $router->group(['prefix' => 'rol'], function () use ($router) {
     $router->post('/{id}', 'RolController@edit');
     $router->delete('/{id}', 'RolController@destroy');
 });
+
+$router->group(['prefix' => 'permiso'], function () use ($router) {
+    $router->get('/', 'PermisoController@showAll');
+    $router->get('/{id}', 'PermisoController@find');
+    $router->post('/', 'PermisoController@store');
+    $router->post('/{id}', 'PermisoController@edit');
+    $router->delete('/{id}', 'PermisoController@destroy');
+});
