@@ -14,3 +14,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'rol'], function () use ($router) {
+    $router->get('/', 'RolController@showAll');
+    $router->get('/{id}', 'RolController@find');
+    $router->post('/', 'RolController@store');
+    $router->post('/{id}', 'RolController@edit');
+    $router->delete('/{id}', 'RolController@destroy');
+});
