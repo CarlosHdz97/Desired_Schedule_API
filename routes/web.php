@@ -30,3 +30,11 @@ $router->group(['prefix' => 'permiso'], function () use ($router) {
     $router->post('/{id}', 'PermisoController@edit');
     $router->delete('/{id}', 'PermisoController@destroy');
 });
+
+$router->group(['prefix' => 'usuario'], function () use ($router) {
+    $router->get('/', 'UsuarioController@showAll');
+    $router->get('/{id}', 'UsuarioController@find');
+    $router->post('/', 'UsuarioController@store');
+    $router->post('/{id}', 'UsuarioController@edit');
+    $router->delete('/{id}', 'UsuarioController@destroy');
+});
