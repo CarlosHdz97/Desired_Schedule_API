@@ -38,3 +38,11 @@ $router->group(['prefix' => 'usuario'], function () use ($router) {
     $router->post('/{id}', 'UsuarioController@edit');
     $router->delete('/{id}', 'UsuarioController@destroy');
 });
+
+$router->group(['prefix' => 'tarea'], function () use ($router) {
+    $router->get('/', 'TareaController@showAll');
+    $router->get('/{id}', 'TareaController@find');
+    $router->post('/', 'TareaController@store');
+    $router->post('/{id}', 'TareaController@edit');
+    $router->delete('/{id}', 'TareaController@destroy');
+});
