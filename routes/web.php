@@ -46,3 +46,11 @@ $router->group(['prefix' => 'tarea'], function () use ($router) {
     $router->post('/{id}', 'TareaController@edit');
     $router->delete('/{id}', 'TareaController@destroy');
 });
+
+$router->group(['prefix' => 'academia'], function () use ($router) {
+    $router->get('/', 'AcademiaController@showAll');
+    $router->get('/{id}', 'AcademiaController@find');
+    $router->post('/', 'AcademiaController@store');
+    $router->post('/{id}', 'AcademiaController@edit');
+    $router->delete('/{id}', 'AcademiaController@destroy');
+});

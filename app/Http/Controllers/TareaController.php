@@ -6,7 +6,7 @@ use App\Tarea;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class RolController extends Controller{
+class TareaController extends Controller{
     /**
      * Create a new controller instance.
      *
